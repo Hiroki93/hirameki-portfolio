@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>REBORN FITNESS 高松店 | 2ヶ月集中パーソナルジム</title>
+<meta name="description" content="REBORN FITNESSのランディングページ(架空店・ポートフォリオサンプル)。2ヶ月集中プログラムで理想の体へ。無料カウンセリング受付中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e0e11;
+  --bg-2:#17171b;
+  --card:#1c1c21;
+  --line:#2b2b31;
+  --ink:#f2f2f0;
+  --muted:#9a9aa3;
+  --accent:#c8ff3a;
+  --accent-2:#ff5a3c;
+  --maxw:1080px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;font-family:"Noto Sans JP",sans-serif;color:var(--ink);background:var(--bg);
+  line-height:1.75;-webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+ul,ol{list-style:none;margin:0;padding:0;}
+h1,h2,h3{margin:0;font-weight:900;line-height:1.3;}
+p{margin:0;}
+.num{font-family:"Oswald",sans-serif;}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:16px 34px;border-radius:999px;font-weight:900;font-size:15px;
+  letter-spacing:.02em;transition:.2s ease;border:2px solid transparent;
+}
+.btn-primary{background:var(--accent);color:#0e0e11;}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(200,255,58,.4);}
+.btn-outline{border-color:#3a3a42;color:var(--ink);}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);}
+
+.hd{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(14,14,17,.85);backdrop-filter:blur(8px);border-bottom:1px solid transparent;transition:.2s;
+}
+.hd.scrolled{border-bottom-color:var(--line);}
+.hd-in{display:flex;align-items:center;justify-content:space-between;height:72px;}
+.brand{font-family:"Oswald",sans-serif;font-weight:700;font-size:20px;letter-spacing:.03em;}
+.brand span{color:var(--accent);}
+.hd-cta{padding:11px 22px;font-size:13.5px;}
+
+.hero{padding:150px 0 80px;position:relative;overflow:hidden;}
+.hero-bg{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    radial-gradient(680px 420px at 82% -10%, rgba(200,255,58,.14), transparent 60%),
+    linear-gradient(90deg, rgba(14,14,17,.97) 0%, rgba(14,14,17,.88) 42%, rgba(14,14,17,.55) 100%),
+    url('../assets/gym/hero.jpg') center right / cover no-repeat;
+}
+.hero-badge{
+  display:inline-block;background:var(--accent-2);color:#fff;font-weight:900;font-size:12.5px;
+  padding:7px 16px;border-radius:999px;margin-bottom:22px;letter-spacing:.04em;
+}
+.hero h1{font-size:clamp(32px,5.2vw,54px);letter-spacing:-.01em;}
+.hero h1 em{font-style:normal;color:var(--accent);}
+.hero-lead{margin-top:22px;color:var(--muted);font-size:16px;max-width:560px;}
+.hero-actions{margin-top:36px;display:flex;gap:14px;flex-wrap:wrap;}
+.hero-stats{margin-top:60px;display:flex;gap:40px;flex-wrap:wrap;padding-top:28px;border-top:1px solid var(--line);}
+.hero-stats li{display:flex;flex-direction:column;gap:4px;}
+.hero-stats b{font-family:"Oswald",sans-serif;font-size:30px;color:var(--accent);}
+.hero-stats span{font-size:12.5px;color:var(--muted);}
+
+section{padding:100px 0;}
+.eyebrow{font-family:"Oswald",sans-serif;font-weight:700;font-size:13px;letter-spacing:.16em;color:var(--accent);text-transform:uppercase;margin-bottom:16px;}
+h2{font-size:clamp(26px,3.6vw,38px);}
+.lead{color:var(--muted);font-size:15.5px;max-width:560px;margin-top:16px;margin-bottom:52px;}
+
+/* Pain points */
+.pain{background:var(--bg-2);}
+.pain-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.pain-item{
+  display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-radius:12px;padding:20px 22px;
+}
+.pain-x{
+  flex-shrink:0;width:26px;height:26px;border-radius:50%;background:rgba(255,90,60,.15);color:var(--accent-2);
+  display:flex;align-items:center;justify-content:center;font-weight:900;font-size:14px;
+}
+.pain-item p{font-size:14.5px;color:#d6d6da;}
+
+/* Results */
+.results{background:var(--bg);}
+.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.result-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px;}
+.result-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;}
+.result-head b{font-family:"Oswald",sans-serif;font-size:17px;}
+.result-head span{font-size:12px;color:var(--muted);}
+.result-row{margin-bottom:14px;}
+.result-row:last-child{margin-bottom:0;}
+.result-label{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:6px;}
+.result-bar{height:8px;border-radius:999px;background:#2b2b31;overflow:hidden;}
+.result-bar span{display:block;height:100%;background:linear-gradient(90deg,var(--accent-2),var(--accent));border-radius:999px;}
+.result-note{margin-top:16px;font-size:12.5px;color:var(--accent);font-weight:700;}
+
+/* Facility */
+.facility{background:var(--bg-2);}
+.facility-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;}
+.facility-card{margin:0;border-radius:14px;overflow:hidden;border:1px solid var(--line);}
+.facility-card img{aspect-ratio:4/3;object-fit:cover;width:100%;}
+.facility-card figcaption{padding:14px 18px;font-size:13px;color:var(--muted);background:var(--card);}
+
+/* Strengths */
+.strengths{background:var(--bg-2);}
+.str-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.str-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:28px 22px;}
+.str-num{font-family:"Oswald",sans-serif;color:var(--accent);font-size:14px;display:block;margin-bottom:14px;}
+.str-card h3{font-size:16px;margin-bottom:10px;}
+.str-card p{font-size:13.5px;color:var(--muted);}
+
+/* Program */
+.program{background:var(--bg);}
+.program-list{display:flex;flex-direction:column;max-width:720px;}
+.program-list li{display:flex;gap:22px;padding:24px 0;border-bottom:1px solid var(--line);}
+.program-list li:last-child{border-bottom:0;}
+.program-check{
+  flex-shrink:0;width:28px;height:28px;border-radius:50%;background:rgba(200,255,58,.15);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-weight:900;
+}
+.program-list h3{font-size:16px;margin-bottom:6px;}
+.program-list p{font-size:14px;color:var(--muted);}
+
+/* Pricing */
+.pricing{background:var(--bg-2);}
+.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.price-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:32px 28px;position:relative;}
+.price-card.featured{border-color:var(--accent);}
+.price-badge{
+  position:absolute;top:-13px;right:24px;background:var(--accent);color:#0e0e11;font-weight:900;
+  font-size:12px;padding:5px 14px;border-radius:999px;
+}
+.price-card h3{font-family:"Oswald",sans-serif;font-size:15px;color:var(--muted);margin-bottom:12px;font-weight:600;}
+.price-num{font-family:"Oswald",sans-serif;font-size:32px;font-weight:700;margin-bottom:20px;}
+.price-num span{font-size:14px;color:var(--muted);font-weight:400;}
+.price-card ul{display:flex;flex-direction:column;gap:10px;}
+.price-card li{font-size:14px;color:#d6d6da;padding-left:20px;position:relative;}
+.price-card li::before{content:"";position:absolute;left:0;top:8px;width:6px;height:6px;border-radius:50%;background:var(--accent);}
+
+/* Voice */
+.voice{background:var(--bg);}
+.voice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.voice-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 24px;}
+.voice-head{display:flex;gap:12px;align-items:center;margin-bottom:16px;}
+.voice-avatar{
+  width:40px;height:40px;border-radius:50%;background:#2b2b31;color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-family:"Oswald",sans-serif;font-weight:700;
+}
+.voice-head b{display:block;font-size:14px;}
+.voice-head span{font-size:12px;color:var(--muted);}
+.voice-card p{font-size:13.5px;color:#d6d6da;}
+
+/* Trainers */
+.trainers{background:var(--bg-2);}
+.trainer-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;}
+.trainer-card{display:flex;gap:20px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;}
+.trainer-avatar{
+  width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--accent-2),var(--accent));
+  flex-shrink:0;display:flex;align-items:center;justify-content:center;font-family:"Oswald",sans-serif;
+  font-weight:700;color:#0e0e11;font-size:18px;
+}
+.trainer-card h3{font-size:16px;margin-bottom:4px;}
+.trainer-role{font-size:11.5px;color:var(--accent);font-weight:700;display:block;margin-bottom:10px;}
+.trainer-card p{font-size:13.5px;color:var(--muted);}
+
+/* FAQ */
+.faq{background:var(--bg);}
+.faq-list{max-width:720px;}
+.faq-item{border-bottom:1px solid var(--line);padding:22px 0;}
+.faq-q{display:flex;gap:14px;font-weight:700;font-size:15px;}
+.faq-q .q-mark{font-family:"Oswald",sans-serif;color:var(--accent);}
+.faq-a{display:flex;gap:14px;margin-top:12px;}
+.faq-a .a-mark{font-family:"Oswald",sans-serif;color:var(--muted);}
+.faq-a p{font-size:14px;color:var(--muted);}
+
+/* Contact */
+.contact{background:linear-gradient(135deg,#1a1f0d,#0e0e11);text-align:center;}
+.contact .eyebrow{color:var(--accent);}
+.contact h2{max-width:640px;margin:0 auto;}
+.contact-lead{color:var(--muted);max-width:480px;margin:22px auto 40px;font-size:15px;}
+.contact-note{margin-top:20px;font-size:12.5px;color:#6f6f78;max-width:520px;margin-left:auto;margin-right:auto;}
+
+.ft{background:#0a0a0c;color:#6f6f78;padding:26px 0;font-size:12.5px;text-align:center;}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@media (max-width:860px){
+  .pain-grid{grid-template-columns:1fr;}
+  .result-grid{grid-template-columns:1fr;}
+  .facility-grid{grid-template-columns:1fr;}
+  .str-grid{grid-template-columns:repeat(2,1fr);}
+  .price-grid{grid-template-columns:1fr;}
+  .voice-grid{grid-template-columns:1fr;}
+  .trainer-grid{grid-template-columns:1fr;}
+  section{padding:72px 0;}
+  .hero{padding:128px 0 56px;}
+}
+</style>
+</head>
+<body>
+
+<header class="hd" id="hd">
+  <div class="wrap hd-in">
+    <a href="#top" class="brand">REBORN<span>FITNESS</span></a>
+    <a href="#contact" class="btn btn-primary hd-cta">無料体験を予約</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="wrap">
+      <span class="hero-badge reveal">今月の無料体験枠 残り8名</span>
+      <h1 class="reveal">2ヶ月で、<em>見た目も自信も</em>変える。</h1>
+      <p class="hero-lead reveal">
+        専属トレーナーによるマンツーマン指導と、管理栄養士監修の食事サポート。
+        自己流ダイエットを繰り返してきた方のための、高松発パーソナルジムです。
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">無料カウンセリングを予約する</a>
+        <a href="#results" class="btn btn-outline">実績を見る</a>
+      </div>
+      <ul class="hero-stats reveal">
+        <li><b class="num">2ヶ月</b><span>集中プログラム期間</span></li>
+        <li><b class="num">完全個室</b><span>マンツーマン指導</span></li>
+        <li><b class="num">全額返金</b><span>保証制度あり</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pain">
+    <div class="wrap">
+      <p class="eyebrow reveal">SUCH AS...</p>
+      <h2 class="reveal">こんなお悩み、ありませんか?</h2>
+      <p class="lead reveal">一人での挑戦がうまくいかないのは、意志が弱いからではありません。</p>
+
+      <div class="pain-grid">
+        <div class="pain-item reveal"><span class="pain-x">×</span><p>自己流のダイエットで何度もリバウンドしている</p></div>
+        <div class="pain-item reveal"><span class="pain-x">×</span><p>ジムに入会したものの、続かずに辞めてしまった</p></div>
+        <div class="pain-item reveal"><span class="pain-x">×</span><p>何を食べればいいのか、自分で判断できない</p></div>
+        <div class="pain-item reveal"><span class="pain-x">×</span><p>結婚式やイベントまでに、確実に結果を出したい</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <div class="wrap">
+      <p class="eyebrow reveal">RESULTS</p>
+      <h2 class="reveal">お客様の実績データ</h2>
+      <p class="lead reveal">写真ではなく、実測データで結果をお伝えします(いずれも架空の記録です)。</p>
+
+      <div class="result-grid">
+        <div class="result-card reveal">
+          <div class="result-head"><b class="num">M.K様(30代・女性)</b><span>60日間</span></div>
+          <div class="result-row">
+            <div class="result-label"><span>体重</span><span>68.4kg → 60.2kg</span></div>
+            <div class="result-bar"><span style="width:88%"></span></div>
+          </div>
+          <div class="result-row">
+            <div class="result-label"><span>体脂肪率</span><span>32% → 24%</span></div>
+            <div class="result-bar"><span style="width:75%"></span></div>
+          </div>
+          <p class="result-note">-8.2kg / -8pt</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-head"><b class="num">T.S様(40代・男性)</b><span>60日間</span></div>
+          <div class="result-row">
+            <div class="result-label"><span>体重</span><span>84.1kg → 74.6kg</span></div>
+            <div class="result-bar"><span style="width:82%"></span></div>
+          </div>
+          <div class="result-row">
+            <div class="result-label"><span>体脂肪率</span><span>26% → 18%</span></div>
+            <div class="result-bar"><span style="width:80%"></span></div>
+          </div>
+          <p class="result-note">-9.5kg / -8pt</p>
+        </div>
+        <div class="result-card reveal">
+          <div class="result-head"><b class="num">Y.N様(20代・女性)</b><span>90日間</span></div>
+          <div class="result-row">
+            <div class="result-label"><span>体重</span><span>58.0kg → 52.3kg</span></div>
+            <div class="result-bar"><span style="width:70%"></span></div>
+          </div>
+          <div class="result-row">
+            <div class="result-label"><span>体脂肪率</span><span>28% → 21%</span></div>
+            <div class="result-bar"><span style="width:72%"></span></div>
+          </div>
+          <p class="result-note">-5.7kg / -7pt</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="facility">
+    <div class="wrap">
+      <p class="eyebrow reveal">FACILITY</p>
+      <h2 class="reveal">設備紹介</h2>
+      <p class="lead reveal">完全個室のトレーニングスペースに、目的に合わせたマシンを揃えています。</p>
+
+      <div class="facility-grid">
+        <figure class="facility-card reveal">
+          <img src="../assets/gym/machine-weight-stack.jpg" alt="ウェイトスタック式のトレーニングマシン" loading="lazy">
+          <figcaption>ウェイトスタックマシン</figcaption>
+        </figure>
+        <figure class="facility-card reveal">
+          <img src="../assets/gym/machine-dumbbell.jpg" alt="ラックに並んだダンベル" loading="lazy">
+          <figcaption>フリーウェイトエリア</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="strengths">
+    <div class="wrap">
+      <p class="eyebrow reveal">WHY REBORN</p>
+      <h2 class="reveal">選ばれる4つの理由</h2>
+
+      <div class="str-grid">
+        <div class="str-card reveal"><span class="str-num num">01</span><h3>完全個室・専属制</h3><p>入会から卒業まで、同じトレーナーが専属で担当します。</p></div>
+        <div class="str-card reveal"><span class="str-num num">02</span><h3>食事サポート</h3><p>管理栄養士監修のもと、無理のない食事メニューを提案します。</p></div>
+        <div class="str-card reveal"><span class="str-num num">03</span><h3>数値で管理</h3><p>InBody計測を毎回実施し、体組成の変化を可視化します。</p></div>
+        <div class="str-card reveal"><span class="str-num num">04</span><h3>全額返金保証</h3><p>規定の条件を満たし結果が出なかった場合、全額返金します。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="program">
+    <div class="wrap">
+      <p class="eyebrow reveal">PROGRAM</p>
+      <h2 class="reveal">プログラム内容</h2>
+
+      <ul class="program-list">
+        <li class="reveal"><span class="program-check">✓</span><div><h3>週2回・60分のマンツーマントレーニング</h3><p>目的と体力に合わせて、毎回メニューを調整します。</p></div></li>
+        <li class="reveal"><span class="program-check">✓</span><div><h3>LINEでの食事チェック(毎日)</h3><p>食べたものを写真で送るだけ。専属トレーナーがフィードバックします。</p></div></li>
+        <li class="reveal"><span class="program-check">✓</span><div><h3>InBody計測(月2回)</h3><p>体重だけでなく、筋肉量・体脂肪率まで数値で確認できます。</p></div></li>
+        <li class="reveal"><span class="program-check">✓</span><div><h3>卒業後の維持プラン相談</h3><p>プログラム終了後、リバウンドしないための維持方法もご案内します。</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <div class="wrap">
+      <p class="eyebrow reveal">PRICING</p>
+      <h2 class="reveal">料金プラン</h2>
+      <p class="lead reveal">入会金は現在無料キャンペーン中です(通常33,000円)。</p>
+
+      <div class="price-grid">
+        <div class="price-card reveal">
+          <h3 class="num">2ヶ月プラン(全16回)</h3>
+          <p class="price-num">¥217,800<span>(税込)</span></p>
+          <ul>
+            <li>週2回 × 8週間</li>
+            <li>食事サポート付き</li>
+            <li>InBody計測4回</li>
+          </ul>
+        </div>
+        <div class="price-card featured reveal">
+          <span class="price-badge">おすすめ</span>
+          <h3 class="num">3ヶ月プラン(全24回)</h3>
+          <p class="price-num">¥298,000<span>(税込)</span></p>
+          <ul>
+            <li>週2回 × 12週間</li>
+            <li>食事サポート付き</li>
+            <li>InBody計測6回</li>
+            <li>卒業後の維持プラン相談付き</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="voice">
+    <div class="wrap">
+      <p class="eyebrow reveal">VOICE</p>
+      <h2 class="reveal">ご利用者様の声</h2>
+      <p class="lead reveal">※お客様の声はすべて架空の内容です(ポートフォリオサンプルのため)。</p>
+
+      <div class="voice-grid">
+        <div class="voice-card reveal">
+          <div class="voice-head"><div class="voice-avatar num">M</div><div><b>M.K様</b><span>60日間利用</span></div></div>
+          <p>「一人だとどうしても甘えてしまうタイプなので、専属で見てもらえる安心感がありました。」</p>
+        </div>
+        <div class="voice-card reveal">
+          <div class="voice-head"><div class="voice-avatar num">T</div><div><b>T.S様</b><span>60日間利用</span></div></div>
+          <p>「食事の写真を送るだけで管理してもらえるのが続けやすかったです。数値で見えるのがモチベーションになりました。」</p>
+        </div>
+        <div class="voice-card reveal">
+          <div class="voice-head"><div class="voice-avatar num">Y</div><div><b>Y.N様</b><span>90日間利用</span></div></div>
+          <p>「結婚式までに、と相談したら逆算でプランを組んでもらえました。無理のないペースで続けられました。」</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="trainers">
+    <div class="wrap">
+      <p class="eyebrow reveal">TRAINERS</p>
+      <h2 class="reveal">トレーナー紹介</h2>
+
+      <div class="trainer-grid">
+        <div class="trainer-card reveal">
+          <div class="trainer-avatar num">R</div>
+          <div><span class="trainer-role">代表トレーナー</span><h3>竜崎 大輔</h3><p>NSCA-CPT保持。競技経験を活かし、初心者にも分かりやすい指導を心がけている。</p></div>
+        </div>
+        <div class="trainer-card reveal">
+          <div class="trainer-avatar num">A</div>
+          <div><span class="trainer-role">管理栄養士 / トレーナー</span><h3>穴吹 まゆ</h3><p>食事指導を専門とし、無理な糖質制限に頼らないボディメイクを得意とする。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <div class="wrap">
+      <p class="eyebrow reveal">FAQ</p>
+      <h2 class="reveal">よくあるご質問</h2>
+
+      <div class="faq-list">
+        <div class="faq-item reveal">
+          <div class="faq-q"><span class="q-mark">Q.</span>運動経験がなくても大丈夫ですか?</div>
+          <div class="faq-a"><span class="a-mark">A.</span><p>はい。体力測定の結果に合わせて、無理のない強度から始めます。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q"><span class="q-mark">Q.</span>食事制限が厳しいイメージがあります。</div>
+          <div class="faq-a"><span class="a-mark">A.</span><p>極端な糖質制限は行いません。継続できる範囲での食事調整をご提案します。</p></div>
+        </div>
+        <div class="faq-item reveal">
+          <div class="faq-q"><span class="q-mark">Q.</span>途中でプランを変更できますか?</div>
+          <div class="faq-a"><span class="a-mark">A.</span><p>体調やご都合に応じて、トレーナーとご相談のうえ調整可能です。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow reveal">CONTACT</p>
+      <h2 class="reveal">まずは無料カウンセリングへ</h2>
+      <p class="contact-lead reveal">現在のお悩みや目標をヒアリングし、あなたに合ったプランをご提案します。</p>
+      <a href="#" class="btn btn-primary reveal">無料カウンセリングを予約する</a>
+      <p class="contact-note reveal">※これは架空の店舗によるポートフォリオサンプルです。店舗名・実績・お客様の声・料金はすべて架空のものです。</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="ft">
+  <div class="wrap">© 2026 REBORN FITNESS(架空・サンプル)</div>
+</footer>
+
+<script>
+  var hd = document.getElementById('hd');
+  window.addEventListener('scroll', function(){ hd.classList.toggle('scrolled', window.scrollY > 8); }, { passive: true });
+
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function(e){ e.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: 0.15 });
+    els.forEach(function(e){ io.observe(e); });
+  }
+</script>
+</body>
+</html>
