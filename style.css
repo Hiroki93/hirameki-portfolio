@@ -181,10 +181,11 @@ h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px;}
 .dev-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
 .dev-card{
   background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-  padding:36px 32px;transition:transform .25s ease, box-shadow .25s ease;
+  overflow:hidden;transition:transform .25s ease, box-shadow .25s ease;
 }
 .dev-card:hover{transform:translateY(-6px);box-shadow:var(--shadow);}
-.dev-icon{width:52px;height:52px;border-radius:14px;margin-bottom:20px;}
+.dev-thumb{aspect-ratio:16/9;background-size:cover;background-position:center;}
+.dev-card-body{padding:32px;}
 .status-badge{
   display:inline-block;font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;
   margin-bottom:14px;
@@ -299,6 +300,11 @@ h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px;}
   background:var(--grad);opacity:.9;
 }
 .profile-text{max-width:560px;}
+.profile-name{font-size:18px;font-weight:700;margin:16px 0 18px;}
+.profile-name span{
+  display:inline-block;margin-left:10px;font-size:12px;font-weight:700;color:var(--accent);
+  background:rgba(79,107,255,.1);padding:4px 10px;border-radius:999px;vertical-align:middle;
+}
 .profile-text p:last-child{color:var(--muted);font-size:15px;margin-top:6px;}
 
 /* ---------- Contact ---------- */
