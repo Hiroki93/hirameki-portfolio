@@ -305,7 +305,11 @@ h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px;}
   display:inline-block;margin-left:10px;font-size:12px;font-weight:700;color:var(--accent);
   background:rgba(79,107,255,.1);padding:4px 10px;border-radius:999px;vertical-align:middle;
 }
-.profile-text p:last-child{color:var(--muted);font-size:15px;margin-top:6px;}
+.profile-text > p{color:var(--muted);font-size:15px;margin-top:6px;}
+.profile-note{
+  margin-top:18px !important;padding-top:16px;border-top:1px solid var(--line);
+  font-size:13.5px !important;color:#7c88a3 !important;
+}
 
 /* ---------- Contact ---------- */
 .contact{background:var(--navy);color:#fff;text-align:center;}
