@@ -14,6 +14,32 @@ nav.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => nav.classList.remove('open'));
 });
 
+// Contact form -> mailto
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const name = document.getElementById('cfName').value.trim();
+    const email = document.getElementById('cfEmail').value.trim();
+    const service = document.getElementById('cfService').value;
+    const message = document.getElementById('cfMessage').value.trim();
+
+    const subject = `【HIRAMEKIへのお問い合わせ】${service}`;
+    const body =
+      `お名前: ${name}\n` +
+      `メールアドレス: ${email}\n` +
+      `ご相談内容: ${service}\n` +
+      `\nメッセージ:\n${message}`;
+
+    const mailto =
+      'mailto:h.morino93@gmail.com' +
+      `?subject=${encodeURIComponent(subject)}` +
+      `&body=${encodeURIComponent(body)}`;
+
+    window.location.href = mailto;
+  });
+}
+
 // Reveal on scroll
 const revealEls = document.querySelectorAll('.reveal');
 const io = new IntersectionObserver((entries) => {

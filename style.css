@@ -319,6 +319,26 @@ h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px;}
 .contact-lead{color:#aab4cc;max-width:480px;margin:0 auto 36px;}
 .contact-mail{margin-top:20px;color:#aab4cc;font-size:14px;}
 
+.contact-form{width:100%;max-width:480px;text-align:left;}
+.form-row{margin-bottom:20px;}
+.form-row label{display:block;font-size:13.5px;font-weight:700;margin-bottom:8px;color:#dde2ee;}
+.form-row .req{color:var(--accent-2);font-weight:700;font-size:11.5px;margin-left:4px;}
+.form-row input,
+.form-row select,
+.form-row textarea{
+  width:100%;padding:13px 14px;border-radius:10px;border:1px solid rgba(255,255,255,.16);
+  background:rgba(255,255,255,.06);color:#fff;font-family:inherit;font-size:14.5px;
+}
+.form-row textarea{resize:vertical;}
+.form-row input:focus,
+.form-row select:focus,
+.form-row textarea:focus{outline:2px solid var(--accent-2);outline-offset:1px;}
+.form-row input::placeholder,
+.form-row textarea::placeholder{color:#8590a8;}
+.form-row select{color-scheme:dark;}
+.contact-form .btn{width:100%;}
+.form-note{margin-top:14px;font-size:12.5px;color:#8590a8;text-align:center;}
+
 /* ---------- Footer ---------- */
 .site-footer{background:var(--navy-2);color:#8590a8;padding:26px 0;}
 .footer-inner{font-size:13px;text-align:center;}

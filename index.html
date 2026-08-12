@@ -444,9 +444,36 @@
       <p class="section-eyebrow reveal light">CONTACT</p>
       <h2 class="reveal light">まずはお気軽にご相談ください</h2>
       <p class="reveal light contact-lead">LP・HP制作、動画/画像素材、業務効率化について、些細なことでもお問い合わせください。</p>
-      <a href="mailto:h.morino93@gmail.com?subject=%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B" class="btn btn-primary btn-large reveal">
-        メールで相談する
-      </a>
+
+      <form class="contact-form reveal" id="contactForm">
+        <div class="form-row">
+          <label for="cfName">お名前 <span class="req">必須</span></label>
+          <input type="text" id="cfName" name="name" required autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="cfEmail">メールアドレス <span class="req">必須</span></label>
+          <input type="email" id="cfEmail" name="email" required autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="cfService">ご相談内容</label>
+          <select id="cfService" name="service">
+            <option value="LP制作">LP制作</option>
+            <option value="HP制作">HP制作</option>
+            <option value="動画・画像素材制作">動画・画像素材制作</option>
+            <option value="業務効率化">業務効率化</option>
+            <option value="その他・まだ決まっていない">その他・まだ決まっていない</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="cfMessage">メッセージ <span class="req">必須</span></label>
+          <textarea id="cfMessage" name="message" rows="5" required placeholder="現在のお悩みやご希望など、わかる範囲で構いません"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-large">
+          この内容でメールを作成する
+        </button>
+        <p class="form-note">送信ボタンを押すと、入力内容を差し込んだ状態でお使いのメールソフトが開きます。そのまま送信すれば完了です。</p>
+      </form>
+
       <p class="contact-mail reveal">h.morino93@gmail.com</p>
     </div>
   </section>
