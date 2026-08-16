@@ -336,6 +336,7 @@ h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:16px;}
 .form-row input::placeholder,
 .form-row textarea::placeholder{color:#8590a8;}
 .form-row select{color-scheme:dark;}
+.form-row select option{color:#16233d;background:#ffffff;}
 .contact-form .btn{width:100%;}
 .form-note{margin-top:14px;font-size:12.5px;color:#8590a8;text-align:center;}
 
