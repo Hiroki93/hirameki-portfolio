@@ -14,29 +14,40 @@ nav.querySelectorAll('a').forEach(a => {
   a.addEventListener('click', () => nav.classList.remove('open'));
 });
 
-// Contact form -> mailto
+// Contact form -> Web3Forms
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  const submitBtn = document.getElementById('cfSubmit');
+  const note = document.getElementById('cfNote');
+  const defaultNote = note.textContent;
+
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    const name = document.getElementById('cfName').value.trim();
-    const email = document.getElementById('cfEmail').value.trim();
-    const service = document.getElementById('cfService').value;
-    const message = document.getElementById('cfMessage').value.trim();
+    submitBtn.disabled = true;
+    submitBtn.textContent = '送信中...';
 
-    const subject = `【HIRAMEKIへのお問い合わせ】${service}`;
-    const body =
-      `お名前: ${name}\n` +
-      `メールアドレス: ${email}\n` +
-      `ご相談内容: ${service}\n` +
-      `\nメッセージ:\n${message}`;
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(Object.fromEntries(new FormData(contactForm))),
+      });
+      const data = await res.json();
 
-    const mailto =
-      'mailto:h.morino93@gmail.com' +
-      `?subject=${encodeURIComponent(subject)}` +
-      `&body=${encodeURIComponent(body)}`;
-
-    window.location.href = mailto;
+      if (data.success) {
+        contactForm.reset();
+        contactForm.querySelectorAll('.form-row, .btn').forEach((el) => (el.style.display = 'none'));
+        note.textContent = '送信しました。ありがとうございます、折り返しご連絡します。';
+        note.classList.add('form-note-success');
+      } else {
+        throw new Error(data.message || 'send failed');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = '送信する';
+      note.textContent = `送信に失敗しました。お手数ですが h.morino93@gmail.com までメールでご連絡ください。`;
+      note.classList.add('form-note-error');
+    }
   });
 }
 

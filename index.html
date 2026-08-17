@@ -445,6 +445,10 @@
       <p class="reveal light contact-lead">LP・HP制作、動画/画像素材、業務効率化について、些細なことでもお問い合わせください。</p>
 
       <form class="contact-form reveal" id="contactForm">
+        <input type="hidden" name="access_key" value="786aaac8-8c21-4b56-9b35-447ce0ef0fb3">
+        <input type="hidden" name="subject" value="【HIRAMEKI】ポートフォリオサイトからのお問い合わせ">
+        <input type="checkbox" name="botcheck" class="botcheck" tabindex="-1" autocomplete="off">
+
         <div class="form-row">
           <label for="cfName">お名前 <span class="req">必須</span></label>
           <input type="text" id="cfName" name="name" required autocomplete="name">
@@ -467,10 +471,10 @@
           <label for="cfMessage">メッセージ <span class="req">必須</span></label>
           <textarea id="cfMessage" name="message" rows="5" required placeholder="現在のお悩みやご希望など、わかる範囲で構いません"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary btn-large">
-          この内容でメールを作成する
+        <button type="submit" class="btn btn-primary btn-large" id="cfSubmit">
+          送信する
         </button>
-        <p class="form-note">送信ボタンを押すと、入力内容を差し込んだ状態でお使いのメールソフトが開きます。そのまま送信すれば完了です。</p>
+        <p class="form-note" id="cfNote">送信ボタンを押すとこちらに直接届きます。折り返しご連絡します。</p>
       </form>
 
       <p class="contact-mail reveal">h.morino93@gmail.com</p>
